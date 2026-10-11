@@ -3,7 +3,7 @@ import pandas as pd
 import streamlit as st
 import doc_anh, ghi_sheet as gs, kiem_tra
 
-st.set_page_config(page_title="Sổ chi công ty", page_icon="🧾", layout="centered")
+st.set_page_config(page_title="Sổ chi Gạch BL", page_icon="🧾", layout="centered")
 
 ma = st.secrets.get("ACCESS_CODE", "")
 if ma and not st.session_state.get("ok"):
@@ -33,7 +33,7 @@ def khoa_gemini():
     return [x.strip() for x in k.split(",")] if isinstance(k, str) else list(k)
 
 
-st.title("🧾 Sổ chi công ty")
+st.title("🧾 Sổ chi Gạch BL")
 if st.session_state.get("tb"):
     st.success(st.session_state.pop("tb"))
 try:
